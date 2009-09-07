@@ -1,0 +1,186 @@
+/*#############################################################
+Name: Deep Red Single Column
+Date: 2009-09-07
+Description: Single-column layout with a touch of red.
+Modified by: Tim Gourley
+#############################################################*/
+
+/*#############################################################
+Name: Deep Red
+Date: 2006-08-28
+Description: A two-column layout with a touch of red.
+Author: Viktor Persson
+URL: http://templates.arcsin.se
+
+Feel free to use and modify but please provide credits.
+#############################################################*/
+
+/* standard elements */
+* {
+	margin: 0;
+	padding: 0;
+}
+body {
+	background: #6C1400 url(../images/bgbody.gif) repeat-y center top;
+	font: normal 1em Tahoma,Verdana,sans-serif;
+}
+div a {
+	color: #FFF;
+	cursor: pointer;
+	text-decoration: none;
+}
+h1 {
+	color: #444;
+	font: normal 2em sans-serif;
+	margin: 18px 0 0 0;
+}
+code {
+	background: url(../images/bgcode.gif);
+	border: 1px solid #F0F0F0;
+	border-left: 6px solid #D91623;
+	color: #555;
+	display: block;
+	font: normal 1em "Lucida Sans Unicode",serif;
+	margin-bottom: 12px;
+	padding: 8px 10px;
+	white-space: pre;
+}
+blockquote {
+	background: url(../images/quote.gif) no-repeat;
+	color: #555;
+	display: block;
+	font: bold 1.2em "Trebuchet MS",serif;
+	margin: 6px 0;
+	padding-left: 28px;
+}
+
+/* structure */
+.main {
+	width: 680px;
+	margin: 0 auto;
+}
+.wrapper {
+	padding-top: 6px;
+	/* width: 420px; */
+	width: 680px;
+}
+.footer {clear: both;}
+
+.header {
+	border-bottom: 6px solid #FFF;
+}
+.content a:hover {
+	background: #D7162C;
+	color: #FFF;
+}
+
+/* logo */
+.header {
+	background: #D91623 url(../images/bgheader.gif) repeat-x;
+	height: 180px;
+}
+.header h1 {
+	margin: 0;
+	padding: 124px 0 0 24px;
+	font: normal 2.2em Verdana,sans-serif;
+}
+
+/* main navigation */
+.link_menu {
+	background: #CC2224 url(../images/grdnt_red.png) repeat-x;
+	font-size: 0.7em;	
+}
+.link_menu a {
+	border-bottom: 1px solid #FFF;
+	display: block;
+	font: bold 0.9em Verdana,sans-serif;
+	height: 18px;
+	padding: 6px 0 0 10px;
+	text-decoration: none;
+}
+.link_menu a:hover {background: #444;}wrapper
+
+/* content */ 
+.content {
+	color: #444;
+	font-family: Verdana,sans-serif;
+	font-size: 2.4em;
+	padding: 0 10px 10px; 
+}
+.content a {
+	color: #FD1C24;
+}
+.content p {
+	margin: 4px 0 10px 0;
+}
+.content .descr {
+	color: #666;
+	margin: 0px 0px 18px 0px;
+	font-size: 0.7em;
+}
+.content .descr a {
+	color: #666;
+	background-color: #fff;
+	text-decoration: underline;
+}
+.content .descr a:hover {
+	color: #666;
+	background-color: #fff;
+	text-decoration: none;
+}
+.content li {
+	list-style: url(../images/li.gif);
+	margin-left: 18px;
+}
+
+/* footer */
+.footer {
+	clear: both;
+	color: #777;
+	background: #2A2A2A;
+	padding: 1px 3px;	
+	margin: 200px 0 0 0;
+	font-size: 0.7em;
+}
+
+/* Submission Form */
+form {
+	margin-top: 25px;
+	border-top: 2px solid #eee;
+	padding-top: 20px;
+}
+input[type=text] {
+	width: 500px;
+	height: 40px;
+	line-height: 38px;
+	font-size: 2em;
+}
+textarea {
+	width: 675px;
+	height: 200px;
+	font-size: 2em;
+}
+input[type=submit] {
+	margin: 10px 0px;
+	font-size: 2.5em;
+	background-color: #2A2A2A;
+	color: #777;
+	border-top: 2px solid #999;
+	border-left: 2px solid #999;
+	border-bottom: 2px solid #000;
+	border-right: 2px solid #000;
+	padding: 5px;
+}
+
+/* Flash messages */
+.flash {
+	margin: 25px;
+	width: 600px;
+	padding: 10px;
+	background-color: #FF7376;
+	color: #540400;
+	border: 1px solid #540400;
+}
+.flash li {
+	margin-left: 30px;
+}

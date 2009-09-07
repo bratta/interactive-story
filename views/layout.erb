@@ -1,0 +1,50 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.1//EN"
+"http://www.w3.org/TR/xhtml11/DTD/xhtml11.dtd">
+<html>
+
+<head>
+<meta http-equiv="content-type" content="text/html; charset=iso-8859-1"/>
+<link rel="stylesheet" type="text/css" href="/stylesheets/story.css"/>
+<title>Interactive Story - MongoDB Edition</title>
+</head>
+
+<body>
+
+<div class="main">
+
+	<div class="wrapper">
+		
+		<div class="header">
+			<h1><a href="/">Interactive Story - MongoDB Edition</a></h1>
+		</div>
+
+		<div class="link_menu">
+			<a href="http://www.mongodb.org" accesskey="1">MongoDB</a>
+			<a href="http://railstips.org/2009/6/27/mongomapper-the-rad-mongo-wrapper" accesskey="2">MongoMapper</a>
+			<a href="http://www.sinatrarb.com" accesskey="3">Sinatra</a>
+			<a href="http://www.engineyard.com" accesskey="4">Engine Yard</a>
+		</div>
+
+    <% if flash[:error] %>
+      <div class="flash">
+        Hey, Shakespeare! Correct these errors first, idiot:<br />
+        <ul>
+        <% flash[:error].each do |err| %>
+          <li><%= err %></li>
+        <% end %>
+        </ul>
+      </div>
+    <% end %>
+    
+    <%= yield %>
+		
+    <div class="footer">
+      Copyright &copy; 2009 Tim Gourley
+    </div>		
+	</div>	
+</div>
+
+
+</body>
+
+</html>

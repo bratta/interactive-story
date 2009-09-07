@@ -1,0 +1,50 @@
+= Interactive Story - MongoDB Edition
+
+This is a test Sinatra application to show off the ease of use with MongoDB and MongoMapper.
+If you're looking for a fully-featured blog application or something similar, this isn't the
+place. However, feel free to fork this code and adjust it to add whatever you like!
+
+
+== Dependencies
+
+To run this application, you need the following gems:
+
+* sinatra
+* mongodb-mongo
+* jnunemaker-mongomapper
+* RedCloth
+
+You also need a working install of MongoDB without --auth turned on. See http://www.mongodb.org 
+for more details.
+
+
+== Running
+
+Once the dependencies are running, do this:
+
+  git clone git://github.com:bratta/interactive-story.git
+  cd interactive-story
+  ./story
+  
+In your web browser, pull up http://localhost:12345
+
+
+== Copyright and License
+
+Theme modified from the Deep Red theme by Viktor Persson as found on http://www.oswd.org
+
+Interactive Story - MongoDB Edition sample project
+Copyright (C) 2009 Tim Gourley.
+
+This program is free software: you can redistribute it and/or modify
+it under the terms of the GNU General Public License as published by
+the Free Software Foundation, either version 3 of the License, or
+(at your option) any later version.
+
+This program is distributed in the hope that it will be useful,
+but WITHOUT ANY WARRANTY; without even the implied warranty of
+MERCHANTABILITY or FITNESS FOR A PARTICULAR PURPOSE.  See the
+GNU General Public License for more details.
+
+You should have received a copy of the GNU General Public License
+along with this program.  If not, see <http://www.gnu.org/licenses/>.

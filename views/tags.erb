@@ -1,0 +1,17 @@
+<div class="content">
+  <h1>Searching for bits with the tag &quot;<%=@tag%>&quot;</h1>
+  <% if @storybits.nil? || @storybits.count == 0 %>
+    <h2>None found</h2>
+  <% end %>
+  <% @storybits.each do |storybit| %>
+    <%= redcloth(storybit.body) %>
+    <div class="descr">
+      Submitted by <%= h storybit.name %> :: <a href="/comments/<%= storybit.id %>">
+      Comments: <%= storybit.comments.count %></a><br />
+      Tags: 
+      <% storybit.tags.each do |tag| %>
+        <a href="/tags/<%=tag%>"><%= tag %></a>
+      <% end %>
+    </div>                  
+  <% end %>		  
+</div>
