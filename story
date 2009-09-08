@@ -3,14 +3,16 @@
 require 'rubygems'
 require 'sinatra'
 require 'erb'
+require 'rack-flash'
 require 'redcloth'
 require 'mongomapper'
 require 'models/storybit'
 
 # Basic Sinatra setings
+use Rack::Flash
+enable :sessions # For flash messages
 set :views, File.dirname(__FILE__) + '/views'
 set :port, 12345
-enable :sessions # For flash messages
 
 # Choose our MongoDB database
 MongoMapper.database = 'story'
@@ -22,7 +24,7 @@ MongoMapper.database = 'story'
 # The index page with the submissions and form
 get "/" do
   @storybits = Storybit.all(:order => '_id')
-  custom_render_erb :index
+  erb :index
 end
 
 # Saving a submission
@@ -41,7 +43,7 @@ end
 # Viewing comments
 get "/comments/:id" do
   @storybit = Storybit.find(params[:id])
-  custom_render_erb :comments
+  erb :comments
 end
 
 # Adding comments
@@ -66,21 +68,6 @@ end
 
 ###########################################################
 ###########################################################
-
-
-# Enable support for saving flash messages
-# to our session object, similar to how Rails does it
-def flash
-  session[:flash] = {} if session[:flash] && session[:flash].class != Hash
-  session[:flash] ||= {}
-end
-
-# Needed to clear the flash after it is displayed
-def custom_render_erb(*args)
-  myerb = erb(*args)
-  flash.clear
-  myerb
-end
 
 
 helpers do

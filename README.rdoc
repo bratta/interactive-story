@@ -10,6 +10,7 @@ place. However, feel free to fork this code and adjust it to add whatever you li
 To run this application, you need the following gems:
 
 * sinatra
+* rack-flash
 * mongodb-mongo
 * jnunemaker-mongomapper
 * RedCloth
