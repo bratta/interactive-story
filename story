@@ -63,7 +63,7 @@ end
 get "/tags/:tag" do
   @tag = params[:tag]
   @storybits = Storybit.all(:conditions => { :tags => @tag }, :order => '_id')
-  custom_render_erb :tags
+  erb :tags
 end
 
 ###########################################################
